@@ -1,0 +1,27 @@
+gitHub管理工具  git bash命令管理工具 可使用GitHub桌面管理工具自带gitbash
+安装yarn 官网
+本项目用npm，使用yarn时出错
+安装 node 官网下载nodejs 查看版本 node -v ,npm -v npm在安装完node自带
+安装 npm install webpack -g    webpack -v
+安装脚手架 npm install vue-cli -g 查看版本 vue -v
+新建项目 vue init webpack 项目名英文小写
+cd 项目名 
+npm install 安装所有依赖包
+npm run dev
+
+gitHub
+新建一个项目
+
+本地
+git init //初始化一个git仓库
+git status //查看文件状态
+git add . //添加所有变动文件到暂存区
+git commit -m "版本说明"  //添加到本地仓库
+git remote add origin 项目的仓库地址   //这是配置push的仓库地址
+git push origin master   //将主分支push到远程仓库
+
+-packages所有组件
+ -theme-chalk组件的样式用 sass预编译
+ 
+ 
+
