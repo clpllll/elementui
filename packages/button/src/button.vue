@@ -1,0 +1,50 @@
+<template>
+  <button class="el-button">
+    按钮
+  </button>
+</template>
+<script>
+  export default {
+    name: "ElButton",
+    props:{
+      size:{
+        type:String,
+        default:"default"
+      },
+      type:{
+        type:String,
+        default:"primary"
+      },
+      plain:{
+        type:Boolean,
+        default:false
+      },
+      round:{
+        type:Boolean,
+        default:false
+      },
+      circle:{
+        type:Boolean,
+        default:false
+      },
+      loading:{
+        type:Boolean,
+        default:false
+      },
+      disabled:{
+        type:Boolean,
+        default:false
+      },
+      icon:String,
+      autofocus:{
+        type:Boolean,
+        default:false
+      },
+      nativeType:{
+        type:String,
+        default:"button"
+      }
+
+    }
+  }
+</script>

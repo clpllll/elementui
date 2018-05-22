@@ -20,8 +20,20 @@ git commit -m "版本说明"  //添加到本地仓库
 git remote add origin 项目的仓库地址   //这是配置push的仓库地址
 git push origin master   //将主分支push到远程仓库
 
+
+字体图标使用svg use
+
 -packages所有组件
  -theme-chalk组件的样式用 sass预编译
- 
+
+ 第一天
+  开发全局插件使用install 和use方法
+  ps:
+    ElButton.install = function(Vue){
+      Vue.components(ElButton.name,ElButton)
+    }
+    使用
+    Vue.use(ElButton)
+
  
 
