@@ -34,6 +34,29 @@ git push origin master   //将主分支push到远程仓库
     }
     使用
     Vue.use(ElButton)
+  第二天
+    使用sass
+    安装sass-loader node-sass
+    sass-loader依赖node-sass
+
+    问题 node-sass安装失败 err \node-sass:command failed
+    可能是被墙了，
+    解决：1.使用cnpm安装
+          2.如果必须要用yarn 安装 则需要手动去下载文件,然后设置环境变量
+          下载地址 https://github.com/sass/node-sass-binaries ,要下载与node对应的版本,不然也会提示版本不对而安装失败.
+
+          我用的是 https://github.com/sass/node-sass-binaries/blob/master/win32-x64-51_binding.node  (node v7.10.0)
+
+          设置环境变量命令set SASS_BINARY_PATH=~\Downloads\win32-x64-51_binding.node(你的存放地址)
+
+          命令设置的只是一次性的,一劳永逸的办法是--高级系统设置-->环境变量-->新建系统变量
+
+          查看 echo %SASS_BINARY_PATH%
+
+          然后就可以执行成功 yarn install node-sass
+
+  配置sass的loader
+
 
  
 
