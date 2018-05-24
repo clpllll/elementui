@@ -1,0 +1,174 @@
+//color
+$--color-white:#fff !default;
+$--color-back:#000 !default;
+$--color-primary: #409EFF !default;
+$--color-primary-light-1:mix($--color-white,$--color-primary,10%);
+$--color-primary-light-2:mix($--color-white,$--color-primary,20%);
+$--color-primary-light-3:mix($--color-white,$--color-primary,30%);
+$--color-primary-light-4:mix($--color-white,$--color-primary,40%);
+$--color-primary-light-5:mix($--color-white,$--color-primary,50%);
+$--color-primary-light-6:mix($--color-white,$--color-primary,60%);
+$--color-primary-light-7:mix($--color-white,$--color-primary,70%);
+$--color-primary-light-8:mix($--color-white,$--color-primary,80%);
+$--color-primary-light-9:mix($--color-white,$--color-primary,90%);
+$--color-success:#67c23a !default;
+$--color-warning: #e6a23c !default;
+$--color-info:#909399 !default;
+$--color-danger: #f56c6c !default;
+
+$--color-success-light:mix($--color-white,$--color-success,80%) !default;
+$--color-warning-light:mix($--color-white,$--color-warning,80%) !default;
+$--color-info-light:mix($--color-white,$--color-info,80%) !default;
+$--color-danger-light:mix($--color-white,$--color-danger,80%) !default;
+
+$--color-success-lighter:mix($--color-white,$--color-success,90%) !default;
+$--color-warning-lighter:mix($--color-white,$--color-warning,90%) !default;
+$--color-info-lighter:mix($--color-white,$--color-info,90%) !default;
+$--color-danger-lighter:mix($--color-white,$--color-danger,90%) !default;
+
+//text color
+$--color-text-primary: #303133 !default;
+$--color-text-regular: #606266 !default;
+$--color-text-secondary: #909399 !default;
+$--color-text-placeholder: #c0c4cc !default;
+
+//link color
+$--link-color:$--color-primary-light-2 !default;
+$--link-hover-color: $--color-primary !default;
+
+//background
+$--background-color-base: #f5f7fa !default;
+//border
+$--border-width-base: 1px !default;
+$--border-style-base: solid !default;
+$--border-color-base: #f5f7fa !default;
+$--border-color-light: #e4e7ed !default;
+$--border-color-lighter: #ebeef5 !default;
+$--border-color-extra-light: #f2f6fc !default;
+$--border-hover-color: $--color-text-placeholder !default;
+$--border-base:$--border-color-base $--border-style-base $--border-color-base !default;
+$--border-radius-base:4px !default;
+$--border-radius-samll: 2px !default;
+$--border-radius-circle: 100% !default;
+
+/* Box-shadow
+-------------------------- */
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04) !default;
+$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12) !default;
+$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
+
+//fill
+$--fill-base: $--color-white !default;
+
+/* Font
+-------------------------- */
+$--font-path: 'fonts' !default;
+$--font-size-base: 14px !default;
+$--font-size-small: 13px !default;
+$--font-size-large: 18px !default;
+$--font-color-disabled-base: #bbb !default;
+$--font-weight-primary: 500 !default;
+$--font-line-height-primary: 24px !default;
+
+/* Size
+-------------------------- */
+$--size-base: 14px !default;
+
+/* z-index
+-------------------------- */
+$--index-normal: 1 !default;
+$--index-top: 1000 !default;
+$--index-popper: 2000 !default;
+
+/* Disable base
+-------------------------- */
+$--disabled-fill-base: $--background-color-base !default;
+$--disabled-color-base: $--color-text-placeholder !default;
+$--disabled-border-base: $--border-color-light !default;
+
+//break points
+$--sm: 768px !default; 
+$--md: 992px !default;
+$-lg: 1200px !default;
+$--xl:1920px !default;
+
+$--breakpoints: (
+  'xs':(max-width:$--sm),
+  'sm':(min-width:$--sm),
+  'md':(min-width:$--md),
+  'lg':(min-width: $--lg),
+  'xl':(min-width:$--xl)
+);
+$--breakpoints-spec:(
+  'xs-only': (max-width:$--sm-1),
+  'sm-and-up':(min-width:$--sm),
+  'sm-only':"(min-width:#{$--sm}) and (max-width: #{$--md}-1)",
+  'sm-and-down':(max-width:$--md - 1),
+  'md-and-up':(min-width:$--md),
+  'md-only':"(min-width:#{$--md}) and (max-width:#{$--lg}-1)",
+  'md-and-down':(max-width:$--lg-1),
+  'lg-and-up':(min-width:$--lg),
+  'lg-only':"(min-width:#{$--lg}) and (max-width:#{$--xl}-1)",
+  'lg-and-down':(max-width:#{$--xl}-1),
+  'xl-only':(min-width:$--xl)
+);
+
+//checkbox 
+$--checkbox-button-font-size: $--font-size-base !default;
+$--checkbox-button-checked-fill: $--color-primary !default;
+$--checkbox-button-checked-color: $--color-white !default;
+$--checkbox-button-checked-border-color: $--color-primary !default;
+
+//button
+$--button-font-size:14px !default;
+$--button-font-weight: $--font-weight-primary !default;
+$--button-border-radius:$--border-radius-base !default;
+$--button-padding-vertical:12px !default;
+$--button-padding-horizontal: 20px !default;
+
+$--button-medium-font-size:14px !default;
+$--button-medium-border-radius:$--border-radius-base !default;
+$--button-medium-padding-vertical:10px !default;
+$--button-medium-padding-horizontal:20px !default;
+
+$--button-samll-font-size:12px !default;
+$--button-samll-border-radius:#{$--border-radius-base -1} !default;
+$--button-samll-padding-vertical:9px !default;
+$--button-samll-padding-horizontal:15px !default;
+
+$--button-mini-font-size:12px !default;
+$--button-mini-border-radius:#{$--border-radius-base -1} !default;
+$--button-mini-padding-vertical:7px !default;
+$--button-mini-padding-horizontal:15px !default;
+
+$--button-default-color:$--color-text-regular !default; //regular常规的
+$--button-default-fill:$--color-white !default;
+$--button-default-border:$--border-color-base !default;
+
+$--button-disabled-color: $--color-text-placeholder !default;
+$--button-disabled-fill:$--color-white !default;
+$--button-disabled-border:$--border-color-lighter !default;
+
+$--button-primary-border: $--color-primary !default;
+$--button-primary-color:$--color-white !default;
+$--button-primary-fill: $--color-primary !default;
+
+$--button-success-border: $--color-success !default;
+$--button-success-color:$--color-white !default;
+$--button-success-fill: $--color-success !default;
+
+$--button-warning-border: $--color-warning !default;
+$--button-warning-color:$--color-white !default;
+$--button-warning-fill: $--color-warning !default;
+
+$--button-danger-border: $--color-danger !default;
+$--button-danger-color:$--color-white !default;
+$--button-danger-fill: $--color-danger !default;
+
+$--button-info-border: $--color-info !default;
+$--button-info-color:$--color-white !default;
+$--button-info-fill: $--color-info !default;
+
+$--button-active-shade-percent: 10% !default;
+$--button-hover-tint-percent: 20% !default;
+

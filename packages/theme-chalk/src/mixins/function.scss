@@ -1,0 +1,40 @@
+@import 'config.scss';
+
+@function selectorToString($selector){
+  $selector:inspect($selector); //inspect函数可以产生输出字符串
+  $selector:str-slice($selector, 2, -2);
+  @return $selector
+};
+
+@function containsModifier(){
+  $selector:selectorToString($selector);
+  @if str-index($selector,$modifier-separator){
+    @return true;
+  }@else{
+    @return false;
+  }
+}
+
+@function containWhenFlag(){
+  $selector: selectorToString($selector);
+
+  @if str-index($selector,'.'+ $state-prefix){
+    @return ture;
+  }@else{
+    @return false;
+  }
+}
+
+@function containPseudoClass(){
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, ':'){
+    @return ture;
+  }@else{
+    @return false;
+  }
+}
+
+@function hitAllSpecialNestRule(){
+  @return containsModifier($selector) or containWhenFlag($selector) or containPseudoClass($selector)
+}

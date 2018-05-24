@@ -56,6 +56,8 @@ git push origin master   //将主分支push到远程仓库
           然后就可以执行成功 yarn install node-sass
 
   配置sass的loader
+  之前用yarn安装包失败，删包重新用yarn安装成功
+  
 
 
  
