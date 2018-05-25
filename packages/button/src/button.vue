@@ -63,6 +63,7 @@
   }
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
+@import '../../theme-chalk/src/button.scss';
   .el-button{
     background-color: #fff;
     width: 80px;

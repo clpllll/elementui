@@ -1,10 +1,10 @@
 @import 'function';
-@import '../common/var.scss';
+@import '../common/var';
 //break-points
 //breakpoints屏幕宽度
-@mixin res($key,$map:$--breakpoints){
+@mixin res($key,$map: $--breakpoints){
   @if map-has-key($map, $key){
-    @media screen and #{inspect(map-get($map,$key))} {
+    @media only screen and #{inspect(map-get($map,$key))} {
       @content;
     }
   } @else {
@@ -14,7 +14,8 @@
 
 @mixin b($block){
   $B: $namespace+'-'+$block !global;
-  #{$B}{
+
+  .#{$B}{
     @content;
   }
 }
@@ -26,20 +27,19 @@
   @each $unit in $element{
     $currentSelector: #{$currentSelector+'.'+$B+$element-sparator+$unit+','};
   }
-}
-
-@if hitAllSpecialNestRule($selector) {
-  @at-root {
-    #{$selector} {
+  @if hitAllSpecialNestRule($selector) {
+    @at-root {
+      #{$selector} {
+        #{$currentSelector} {
+          @content;
+        }
+      }
+    }
+  }@else{
+    @at-root {
       #{$currentSelector} {
         @content;
       }
-    }
-  }
-}@else{
-  @at-root {
-    #{$currentSelector} {
-      @content;
     }
   }
 }

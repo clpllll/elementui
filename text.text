@@ -57,7 +57,11 @@ git push origin master   //将主分支push到远程仓库
 
   配置sass的loader
   之前用yarn安装包失败，删包重新用yarn安装成功
-  
+
+  第三天
+  sass  !default 
+  第四天 
+  @content 必须写在mixin中
 
 
  
