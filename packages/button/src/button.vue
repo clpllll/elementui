@@ -14,6 +14,7 @@
   :autofocus = "autofocus"
   :type = "nativeType"
   >
+    <el-icon class="el-icon-loading" v-if="loading" iconName="loading"></el-icon>
     <slot></slot>
   </button>
 </template>
@@ -25,26 +26,11 @@
         type:String,
         default:"default"
       },
-      type:{
-        type:String,
-        default:"primary"
-      },
-      plain:{
-        type:Boolean,
-        default:false
-      },
-      round:{
-        type:Boolean,
-        default:false
-      },
-      circle:{
-        type:Boolean,
-        default:false
-      },
-      loading:{
-        type:Boolean,
-        default:false
-      },
+      type:String,
+      plain:Boolean,
+      round:Boolean,
+      circle:Boolean,
+      loading:Boolean,
       disabled:{
         type:Boolean,
         default:false
@@ -64,8 +50,4 @@
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
 @import '../../theme-chalk/src/button.scss';
-  .el-button{
-    background-color: #fff;
-    width: 80px;
-  }
 </style>

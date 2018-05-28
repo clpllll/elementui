@@ -1,0 +1,27 @@
+.el-icon{
+  width:1em;
+  height:1em;
+  vertical-align:-0.15em;
+  // overflow:hidden; 
+  // background-color: #fff;
+}
+svg path{
+  fill:inherit;
+  stroke:inherit;
+  stroke-width:inherit;
+}
+.el-icon-loading{
+  animation: rotating 2s linear infinite; 
+  .icon{
+    stroke:#fff;
+    stroke-width:80;
+  }
+}
+@keyframes rotating{
+  0%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }
+}
