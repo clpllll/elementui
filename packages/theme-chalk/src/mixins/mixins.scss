@@ -24,8 +24,8 @@
   $E:$element !global;
   $selector: &;
   $currentSelector: '';
-  @each $unit in $element{
-    $currentSelector: #{$currentSelector+'.'+$B+$element-sparator+$unit+','};
+  @each $unit in $element {
+    $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
   }
   @if hitAllSpecialNestRule($selector) {
     @at-root {
@@ -35,7 +35,7 @@
         }
       }
     }
-  }@else{
+  } @else {
     @at-root {
       #{$currentSelector} {
         @content;

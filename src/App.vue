@@ -7,13 +7,14 @@
     <el-button plain disabled type="primary">按钮</el-button>
     <el-button plain round type="info">按钮</el-button>
     <el-button circle icon="hua" size="mini" type="info">ddd</el-button>
-    <img src="./assets/logo.png">
+    <el-progress color='green' :percentage='50'></el-progress>
+    <!-- <img src="./assets/logo.png"> -->
     <!-- <el-icon iconName="loading"></el-icon> -->
     <svg class="icon">
       <use xlink:href="#icon-hua"></use>
     </svg>
     sss
-    <router-view/>
+    <!-- <router-view/> -->
   </div>
 </template>
 
