@@ -2,8 +2,6 @@
   width:1em;
   height:1em;
   vertical-align:-0.15em;
-  // overflow:hidden; 
-  // background-color: #fff;
 }
 svg path{
   fill:inherit;
@@ -12,10 +10,6 @@ svg path{
 }
 .el-icon-loading{
   animation: rotating 2s linear infinite; 
-  .icon{
-    stroke:#fff;
-    stroke-width:80;
-  }
 }
 @keyframes rotating{
   0%{

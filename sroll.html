@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+   .out{
+     height: -200px;
+     border: 1px solid red;
+     overflow: auto;
+   }
+   .inner{
+     height: 30px;
+     background-color: green;
+   }
+   .inner + .inner{
+     margin-top:10px;
+   }
+  </style>
+</head>
+<body>
+  <div class="out">
+    <div class="inner"></div>
+    <div class="inner"></div>
+    <div class="inner"></div>
+    <div class="inner"></div>
+    <div class="inner"></div>
+    <div class="inner"></div>
+    <div class="inner"></div>
+    <div class="inner"></div>
+    <div class="inner"></div>
+    <div class="inner"></div>
+  </div>
+  <script>
+    console.log('aa')
+    let out = document.querySelector('.out');
+    let inner = document.querySelectorAll('inner');
+    out.style.scrollTop = 10;
+  </script>
+</body>
+</html>

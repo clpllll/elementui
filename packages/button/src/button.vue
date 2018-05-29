@@ -15,7 +15,8 @@
   :type = "nativeType"
   >
     <el-icon class="el-icon-loading" v-if="loading" iconName="loading"></el-icon>
-    <slot></slot>
+    <el-icon v-if="!loading && icon" :iconName="icon"></el-icon>
+    <slot v-if="!icon && $slots.default"></slot>
   </button>
 </template>
 <script>
@@ -31,20 +32,15 @@
       round:Boolean,
       circle:Boolean,
       loading:Boolean,
-      disabled:{
-        type:Boolean,
-        default:false
-      },
+      disabled:Boolean,
       icon:String,
-      autofocus:{
-        type:Boolean,
-        default:false
-      },
+      autofocus:Boolean,
       nativeType:{
         type:String,
         default:"button"
       }
-
+    },
+    computed:{
     }
   }
 </script>

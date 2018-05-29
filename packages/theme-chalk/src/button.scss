@@ -53,7 +53,9 @@
     border-color:mix($--color-black,$--color-primary,$--button-active-shade-percent);
   }
   @include when(disabled){
-    &{
+    &,
+    &:hover,
+    &:focus{
       cursor: not-allowed;
       color:$--button-disabled-color;
       background-image:none;
@@ -69,9 +71,29 @@
       border-color:$--button-disabled-border;
     }
   }
+  @include when(loading){
+    pointer-events: none;
+    .el-icon-loading {
+      cursor: default;
+      stroke-width: 80;
+    }
+  }
   @include when(round){
     border-radius: 20px;
     padding:12px 23px;
+  }
+  @include when(circle){
+    border-radius: 50%;
+    padding: 12px;
+  }
+  @include m(medium){
+    @include button-size($--button-medium-padding-vertical,$--button-medium-padding-horizontal,$--button-medium-font-size,$--button-medium-border-radius)
+  }
+  @include m(small){
+    @include button-size($--button-small-padding-vertical,$--button-small-padding-horizontal,$--button-small-font-size,$--button-small-border-radius)
+  }
+  @include m(mini){
+    @include button-size($--button-mini-padding-vertical,$--button-mini-padding-horizontal,$--button-mini-font-size,$--button-mini-border-radius)
   }
   @include m(success) {
     @include button-variant($--button-success-color,$--button-success-fill, $--button-success-border);
@@ -90,3 +112,4 @@
   }
 
 }
+

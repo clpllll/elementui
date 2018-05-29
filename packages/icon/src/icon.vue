@@ -1,5 +1,5 @@
 <template>
-  <svg class="el-icon" style="fill:inherit;stroke:inherit;stroke-width:inherit">
+  <svg class="el-icon">
     <use :xlink:href="'#icon-'+iconName"></use>
   </svg>
 </template>

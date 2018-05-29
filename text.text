@@ -63,6 +63,22 @@ git push origin master   //将主分支push到远程仓库
   第四天 
   @content 必须写在mixin中
 
+  mix($-color-1,$-color-2,$weight) mix函数两种颜色按一定比例混合，$weight表示$-color-1的比例占$weight
+  @at-root 跳出选择器嵌套
+  @content 相当于slot
+
+  第五天 引入svg
+    用svg时必须设置loader
+    svg样式更改问题
+    svg path{
+      fill:inherit;
+      stroke:inherit;
+      stroke-width:inherit;
+    }
+    让svg继承父级来的样式
+    
+
+
 
  
 
