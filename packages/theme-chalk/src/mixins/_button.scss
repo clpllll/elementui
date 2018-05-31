@@ -32,6 +32,7 @@
   background-color: $background-color;
   border-color:$border-color;
   stroke:$color;
+  // fill:$color;
   &:hover,
   &:focus{
     background:mix($--color-white,$background-color,$--button-hover-tint-percent);

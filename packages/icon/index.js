@@ -14,5 +14,4 @@ export default ElIcon;
 const requireAll = requireContext => requireContext.keys().map(requireContext);
 // console.log(require);
 const req = require.context('./svg', false, /\.svg$/); 
-console.log(req)
  requireAll(req)

@@ -7,12 +7,16 @@
     <el-button plain disabled type="primary">按钮</el-button>
     <el-button plain round type="info">按钮</el-button>
     <el-button circle icon="hua" size="mini" type="info">ddd</el-button>
-    <el-progress color='green' :percentage='50'></el-progress>
+    <el-progress color='green':percentage='50'></el-progress>
+    <el-progress status="success" :percentage='20'></el-progress>
     <!-- <img src="./assets/logo.png"> -->
     <!-- <el-icon iconName="loading"></el-icon> -->
-    <svg class="icon">
+    <!-- <svg class="icon">
       <use xlink:href="#icon-hua"></use>
-    </svg>
+    </svg> -->
+   <div>
+      <el-icon iconName="hua" fill-color="green" :stroke-width="80" stroke-color="red"></el-icon>
+   </div>
     sss
     <!-- <router-view/> -->
   </div>
@@ -33,8 +37,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-/* .icon{
-  fill:#fff;
+
+/* .icon{ */
+  /* fill:#fff;
   stroke: red;
   stroke-width: 100;
 } */

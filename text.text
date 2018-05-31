@@ -76,6 +76,9 @@ git push origin master   //将主分支push到远程仓库
       stroke-width:inherit;
     }
     让svg继承父级来的样式
+    第六天 
+    number.tofixed(num)四舍伍入保留num位小数
+    
     
 
 

@@ -1,12 +1,13 @@
 @import 'config.scss';
 
 @function selectorToString($selector){
-  $selector:inspect($selector); //inspect函数可以产生输出字符串
+  $selector:inspect($selector);
+  //inspect函数可以产生输出字符串
   $selector:str-slice($selector, 2, -2);
   @return $selector
 };
 
-@function containsModifier(){
+@function containsModifier($selector){
   $selector:selectorToString($selector);
   @if str-index($selector,$modifier-separator){
     @return true;
@@ -15,7 +16,7 @@
   }
 }
 
-@function containWhenFlag(){
+@function containWhenFlag($selector){
   $selector: selectorToString($selector);
 
   @if str-index($selector,'.'+ $state-prefix){
@@ -25,7 +26,7 @@
   }
 }
 
-@function containPseudoClass(){
+@function containPseudoClass($selector){
   $selector: selectorToString($selector);
 
   @if str-index($selector, ':'){
@@ -35,6 +36,7 @@
   }
 }
 
-@function hitAllSpecialNestRule(){
+@function hitAllSpecialNestRule($selector){
   @return containsModifier($selector) or containWhenFlag($selector) or containPseudoClass($selector)
 }
+

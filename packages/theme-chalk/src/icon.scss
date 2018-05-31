@@ -3,11 +3,12 @@
   height:1em;
   vertical-align:-0.15em;
 }
-svg path{
+svg{
   fill:inherit;
   stroke:inherit;
   stroke-width:inherit;
 }
+
 .el-icon-loading{
   animation: rotating 2s linear infinite; 
 }
