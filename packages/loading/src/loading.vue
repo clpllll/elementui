@@ -8,7 +8,6 @@
         <el-icon v-else :iconName="spinner"></el-icon>
         <p v-if="text" class="el-loading-text">{{text}}</p>
       </div>
-
     </div>
   </transition>
 </template>

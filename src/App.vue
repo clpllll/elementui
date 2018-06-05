@@ -7,7 +7,7 @@
     <el-button plain disabled type="primary">按钮</el-button>
     <el-button plain round type="info">按钮</el-button>
     <el-button circle icon="hua" size="mini" type="info">ddd</el-button>
-    <el-progress color='green':percentage='50'></el-progress>
+    <el-progress color='green' :percentage='50'></el-progress>
     <el-progress status="success" :percentage='20'></el-progress>
     <!-- <img src="./assets/logo.png"> -->
     <!-- <el-icon iconName="loading"></el-icon> -->
